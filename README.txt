@@ -1,1 +1,1 @@
-Catalogue theme for wordpress.
+Catalogue theme development for wordpress.
