@@ -1,1 +1,1 @@
-Catalogue theme development for wordpress.
+Art catalogue theme development for wordpress.
