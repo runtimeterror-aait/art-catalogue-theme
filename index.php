@@ -26,7 +26,7 @@ global $page, $pages; ?>
       ">
     <div class="row align-items-center h-100">
       <div class="d-grid mt-5 p-md-5 gap-md-5 gap-3 col-lg-4 col-md-6 col-10 mx-auto">
-        <a href="#exhibitions" class="btn btn-dark p-4"><?= get_the_title() ?></a>
+        <a href="#exhibitions" class="btn btn-dark p-4"><?php echo  get_the_title() ?></a>
       </div>
       <i onclick="scrollDown('exhibitions')" class="bi btn bi-arrow-down-circle-fill mt-5" style="font-size: 3rem; color: black"></i>
     </div>
@@ -35,7 +35,7 @@ global $page, $pages; ?>
     <div class="container mt-5">
 
       <div>
-        <h2 class="display-3 text-center mb-5"><?= get_the_title() ?></span></h2>
+        <h2 class="display-3 text-center mb-5"><?php echo  get_the_title() ?></span></h2>
         <hr>
       </div>
 
@@ -50,9 +50,9 @@ global $page, $pages; ?>
               <div class="col-lg-3">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title"><?= the_title() ?></h5>
+                    <h5 class="card-title"><?php echo  the_title() ?></h5>
                     <p class="card-text"><?php the_content(esc_html__('Continue reading &rarr;', 'art-catalogue')); ?></p>
-                    <a href="<?= esc_url(get_permalink()) ?>" class="btn btn-dark">Read More</a>
+                    <a href="<?php echo  esc_url(get_permalink()) ?>" class="btn btn-dark">Read More</a>
                   </div>
                 </div>
               </div>

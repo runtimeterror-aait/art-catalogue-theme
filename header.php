@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent sticky-lg-top">
     <div class="container-fluid px-3">
-        <a class="navbar-brand display-6 fw-bold" href="<?= get_home_url() ?>"><?php bloginfo('name'); ?></a>
+        <a class="navbar-brand display-6 fw-bold" href="<?php echo  get_home_url() ?>"><?php bloginfo('name'); ?></a>
         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <i class="bi bi-list" style="font-size: 2rem; color: black"></i>
         </button>

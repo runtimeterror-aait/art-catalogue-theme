@@ -6,10 +6,10 @@
         <p>© 2023 <?php bloginfo('name'); ?> </p>
       </div>
       <div class="">
-        <p><?= bloginfo("description") ?></p>
+        <p><?php echo  bloginfo("description") ?></p>
       </div>
       <div class="">
-        <a href="info@mysite.com"><?= bloginfo('admin_email') ?></a>
+        <a href="info@mysite.com"><?php echo  bloginfo('admin_email') ?></a>
       </div>
     </div>
   </div>

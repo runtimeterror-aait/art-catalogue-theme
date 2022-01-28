@@ -27,7 +27,7 @@
 				<a href="#exhibitions" class="btn btn-dark p-4">
 					<h3><?php
 						/* translators: %s: the search query */
-						printf(esc_html__('Search Results for: %s', 'scaffold'), '<span>' . get_search_query() . '</span>');
+						printf(esc_html__('Search Results for: %s', 'art-catalogue'), '<span>' . get_search_query() . '</span>');
 						?></h3>
 				</a>
 			</div>
@@ -40,7 +40,7 @@
 			<div>
 				<h2 class="display-3 text-center mb-5"><?php
 														/* translators: %s: the search query */
-														printf(esc_html__('Search Results for: %s', 'scaffold'), '<span>' . get_search_query() . '</span>');
+														printf(esc_html__('Search Results for: %s', 'art-catalogue'), '<span>' . get_search_query() . '</span>');
 														?></span></h2>
 				<hr>
 			</div>
@@ -55,9 +55,9 @@
 							<div class="col-lg-3">
 								<div class="card">
 									<div class="card-body">
-										<h5 class="card-title"><?= the_title() ?></h5>
+										<h5 class="card-title"><?php echo  the_title() ?></h5>
 										<p class="card-text"><?php the_content(esc_html__('Continue reading &rarr;', 'art-catalogue')); ?></p>
-										<a href="<?= esc_url(get_permalink()) ?>" class="btn btn-dark">Read More</a>
+										<a href="<?php echo  esc_url(get_permalink()) ?>" class="btn btn-dark">Read More</a>
 									</div>
 								</div>
 							</div>
