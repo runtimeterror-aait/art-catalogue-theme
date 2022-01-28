@@ -34,3 +34,31 @@
 			<i onclick="scrollDown('exhibitions')" class="bi btn bi-arrow-down-circle-fill mt-5" style="font-size: 3rem; color: black"></i>
 		</div>
 	</div>
+	<div id="exhibitions">
+		<div class="container mt-5">
+
+			<div>
+				<h2 class="display-3 text-center mb-5"><?php
+														/* translators: %s: the search query */
+														printf(esc_html__('Search Results for: %s', 'scaffold'), '<span>' . get_search_query() . '</span>');
+														?></span></h2>
+				<hr>
+			</div>
+			<div class="container mt-5 p-5">
+				<div class="row d-flex justify-content-center p-2">
+					<?php
+					if (have_posts()) :
+						while (have_posts()) :
+
+							the_post();
+					?>
+							<div class="col-lg-3">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><?= the_title() ?></h5>
+										<p class="card-text"><?php the_content(esc_html__('Continue reading &rarr;', 'art-catalogue')); ?></p>
+										<a href="<?= esc_url(get_permalink()) ?>" class="btn btn-dark">Read More</a>
+									</div>
+								</div>
+							</div>
+					<?php
