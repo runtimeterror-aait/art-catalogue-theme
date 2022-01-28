@@ -5,10 +5,10 @@ Requires PHP: 5.6
 License: GPLv2 or later
 License URI: <https://www.gnu.org/licenses/gpl-2.0.html>
 
-Art catalogue theme development for wordpress.!
+Art catalogue theme development for wordpress. 
 
 == Description ==
-Art catalogue theme development for designers and photographers using wordpress!
+Art catalogue theme development for designers and photographers using wordpress. This theme can be used by wordpress websites that focus on art catalogue!
 
 Developed By Runtime Terror
 
