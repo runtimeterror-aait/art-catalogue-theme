@@ -18,7 +18,7 @@
     wp_enqueue_script( 'my-scripts', get_template_directory_uri() . '/assets/js/index.js' );
     ?>
 </head>
-
+<?php wp_body_open(); ?>
 <body <?php body_class(); ?>
     <div></div>
     <?php get_template_part( 'header' ); ?>
