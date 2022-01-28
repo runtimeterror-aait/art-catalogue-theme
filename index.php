@@ -1,10 +1,11 @@
+<?php
+global $page, $pages; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="profile" href="https://gmpg.org/xfn/11">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -38,7 +39,7 @@
         <hr>
       </div>
 
-      <div class="container mt-5 p-5">
+      <div class="container mt-5">
         <div class="row d-flex justify-content-center p-2">
           <?php
           if (have_posts()) :
@@ -62,7 +63,6 @@
               endif;
 
             endwhile;
-
             the_posts_navigation();
 
           else :
@@ -70,6 +70,26 @@
           endif;
           ?>
         </div>
+        <center class="pt-3">
+        <?php
+        
+            // This shows the Previous link
+            wp_link_pages(array(
+              'before' => '<div class="page-link-next-prev">',
+              'after' => '', 'previouspagelink' => 'Previous', 'nextpagelink' => '',
+              'next_or_number' => 'next'
+            ));
+
+            // This shows the page count i.e. "1 of 5"
+            echo ($page . ' of ' . count($pages));
+
+            // This shows the Next link
+            wp_link_pages(array(
+              'before' => '', 'after' => '</div>', 'previouspagelink' => '',
+              'nextpagelink' => 'Next', 'next_or_number' => 'next'
+            ));
+        ?>
+        </center>
       </div>
 
 
